@@ -2,10 +2,268 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Mi GitHub Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luz Angela Rodriguez Alvarado | Analista de Datos</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    body { scroll-behavior: smooth; }
+
+    .hero {
+      background: linear-gradient(135deg, #020617, #2563eb);
+      color: white;
+      padding-top: 100px;
+	  padding-bottom: 20px;
+    }
+
+    .profile-img {
+	  width: 50%;
+	  aspect-ratio: 1 / 1;   /* Mantiene proporción cuadrada */
+	  object-fit: cover;
+	  border-radius: 50%;
+	  border: 5px solid white;
+	  margin-bottom: 20px;
+	}
+
+    .badge-skill {
+      background: #e2e8f0;
+      color: #020617;
+      margin: 5px;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      transition: 0.3s;
+    }
+
+    footer {
+      background: #020617;
+      color: #94a3b8;
+    }
+	.profile-img {
+	  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+	}
+  </style>
 </head>
 <body>
-  <h1>Hola mundo 🌎</h1>
-  <p>Mi sitio en GitHub Pages</p>
+
+<!-- NAV -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Luz Angela Rodriguez Alvarado</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero text-center">
+  <div class="container" data-aos="fade-up">
+    <h1 class="fw-bold">Luz Angela Rodriguez Alvarado</h1>
+    <p class="lead">Analista de Datos · Contador Profesional</p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-5">
+  <div class="container">
+    <div class="row align-items-center g-5">
+
+      <!-- FOTO -->
+      <div class="col-md-4 text-center" data-aos="fade-right">
+        <img src="perfil.jpg" class="profile-img mb-3" alt="Foto de perfil">
+        <div>
+          <span class="badge badge-skill">SQL</span>
+          <span class="badge badge-skill">Python</span>
+          <span class="badge badge-skill">Power BI</span>
+          <span class="badge badge-skill">Excel</span>
+          <span class="badge badge-skill">Estadística</span>
+		  <span class="badge badge-skill">Quarto</span>
+		  <span class="badge badge-skill">Tableu</span>
+        </div>
+      </div>
+
+      <!-- TEXTO -->
+      <div class="col-md-8" data-aos="fade-left">
+        <h2>Sobre mí</h2>
+        <p class="text-muted">
+          Analista de datos enfocada en transformar información compleja en decisiones estratégicas y accionables.
+          Me caracterizo por una fuerte orientación al detalle, pensamiento analítico y una visión crítica que me
+          permite identificar patrones, oportunidades y riesgos dentro de grandes volúmenes de datos.<br><br>
+
+          Cuento con experiencia en análisis exploratorio, visualización de datos y automatización de procesos, lo
+          que me permite optimizar flujos de trabajo, reducir tiempos operativos y mejorar la calidad de la
+          información para la toma de decisiones. Tengo facilidad para traducir datos técnicos en insights claros
+          y comprensibles para equipos multidisciplinarios.<br><br>
+
+          Me destaco por mi capacidad para estructurar, limpiar y modelar datos, así como por el uso de herramientas
+          analíticas y de visualización para construir dashboards intuitivos y reportes de alto impacto. Poseo una
+          mentalidad orientada a la mejora continua, enfocada en eficiencia, precisión y valor agregado.<br><br>
+
+          Soy una persona proactiva, organizada y adaptable, con habilidades para trabajar tanto de forma autónoma
+          como en equipo, orientada a generar impacto real en la toma de decisiones.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5" data-aos="fade-up">Proyectos</h2>
+
+    <div class="row g-4">
+
+      <!-- PROJECT -->
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="card project-card shadow h-100">
+          <div class="card-body">
+            <h5 class="card-title">Industria de Alimentos</h5>
+            <p class="text-muted">Pruebas A/B y Embudo de Ventas.</p>
+            <img src="Grafica_Eventos_por_dia_Proyecto_1.png" width="100%"/>
+			<p class="text-muted" style="font-size:0.8rem; margin-top 2px">Resultados de las pruebas de hipótesis:</p>
+        <table style="font-size:0.7rem; text-align:center; width:100%">
+          <tr>
+            <th>Evento</th>
+            <th>A1 vs A2</th>
+            <th>A1 vs B</th>
+            <th>A2 vs B</th>
+          </tr>
+          <tr>
+            <td>OffersScreenAppear</td>
+            <td>2.057256e-10</td>
+            <td>1.450242e-10</td>
+            <td>0.925183</td>
+          </tr>
+          <tr>
+            <td>CartScreenAppear</td>
+            <td>2.734915e-11</td>
+            <td>1.877726e-21</td>
+            <td>0.007451</td>
+          </tr>
+          <tr>
+            <td>PaymentScreenSuccessful</td>
+            <td>1.314295e-18</td>
+            <td>5.785375e-11</td>
+            <td>0.014494</td>
+          </tr>
+        </table><br/>
+                <p style="font-size:0.8rem;"">Esto indica que no existen diferencias estadísticamente significativas entre los grupos A1, A2 y B en los eventos de conversión.<br/>
+Se establecio el nivel de significancia estandar α = 0.05 (5%) Esto significa que aceptamos un 5% de probabilidad de cometer un error tipo I, es decir, rechazar una hipótesis nula verdadera (falso positivo).</p>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <a href="https://github.com/angelus1205/Proyectos-Finales-Bootcamp/blob/main/PROYECTO11.ipynb" target="_blank" class="btn btn-outline-primary w-100">
+              <i class="bi bi-github"></i> Ver repositorio
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT -->
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="150">
+        <div class="card project-card shadow h-100">
+          <div class="card-body">
+            <h5 class="card-title">Analisis Retencion de Clientes Cadena de Gimnasios</h5>
+            <p class="text-muted">Construir un modelo para predecir la cancelación de usuarios.</p>
+            <img src="Mapa_de_Calor_Proyecto_2.png" width="100%"/>
+			<p class="text-muted" style="font-size:0.8rem; margin-top 2px">Resultados de la automatizacion del modelo:</p>
+          
+          <p style="font-size:0.8rem;">Los clústeres muestran patrones completamente distintos: <br>
+            1. CLUSTER PROPENSO A IRSE (ALTO RIESGO) Clúster 3 — 57.3% de churn Es con diferencia, el grupo más riesgoso. Los usuarios de este clúster suelen tener: baja asistencia, baja frecuencia actual, poco uso histórico, poco interés en clases grupales, menor lifetime, contratos cortos <br>
+            2. CLUSTERES LEALES (BAJO RIESGO) Clúster 2 — 2.2% churn (EXCEPCIONALMENTE LEAL) Los mejores clientes: alta actividad, alto gasto adicional, alto lifetime, muchos meses restantes de contrato Clúster 1 — 9% churn Clientes estables y comprometidos.
+<br> 3. CLUSTERES DE RIESGO MODERADO Clúster 0 — 24.6% Clúster 4 — 26.7% Clientes que: muestran consumo promedio tienen actividad irregular no están tan comprometidos como 1 y 2 pero no tan malos como el 3.</p>
+          </div>
+<div class="card-footer bg-white border-0">
+            <a href="https://github.com/angelus1205/Proyectos-Finales-Bootcamp/blob/main/PROYECTO13.ipynb" target="_blank" class="btn btn-outline-primary w-100">
+              <i class="bi bi-github"></i> Ver repositorio
+            </a>
+          </div>
+        </div>
+      </div>
+	  
+	  <!-- PROJECT -->
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="150">
+        <div class="card project-card shadow h-100">
+          <div class="card-body">
+            <h5 class="card-title">Analisis Operadores Ineficaces Empresa de Telecomunicaciones</h5>
+            <p class="text-muted">Resumen Ejecutivo con Kpís y Dashboard.</p>
+            <img src="Metricas_Diarias_Proyecto_3.png" width="100%"/>
+			<p class="text-muted" style="font-size:0.8rem; margin-top 2px">Recomendaciones Estrategicas:</p>
+          
+          <p style="font-size:0.8rem;">1. Intervención de Operadores Problemáticos
+173 operadores problemáticos requieren acción inmediata
+Impacto: Reducción directa del 15.8% de operadores ineficientes
+Acción: Auditoría individual y plan de mejora personalizado
+<br><br>
+2. Redistribución de Carga en Picos de Demanda
+Días críticos identificados: 11 de noviembre (19,640 llamadas) y 11 de octubre (19,160 llamadas)
+Impacto: Reducir tiempo de espera de 298.54 segundos
+Acción: Protocolo de escalamiento automático
+<br><br>
+3. Optimización de Operadores Estrella
+Solo 4 operadores estrella de 1,093 total
+Impacto: Replicar mejores prácticas
+Acción: Programa de mentoría y estandarización
+<br><br>
+4. Gestión de Anomalías de Volumen
+624 registros anómalos detectados
+Impacto: Estabilizar flujo operativo
+Acción: Sistema de alertas tempranas</p>
+          </div>
+          <div class="card-footer bg-white border-0">
+            <a href="https://github.com/angelus1205/Proyectos-Finales-Bootcamp/blob/main/PROYECTO%20FINAL%2014.ipynb" target="_blank" class="btn btn-outline-primary w-100">
+              <i class="bi bi-github"></i> Ver repositorio
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-5 text-center">
+  <div class="container" data-aos="fade-up">
+    <h2>Contacto</h2>
+    <a href="https://github.com/angelus1205" target="_blank" class="btn btn-dark me-2"><i class="bi bi-github"></i> GitHub</a>
+    <a href="https://www.linkedin.com/in/luz-angela-rodriguez-alvarado/" target="_blank" class="btn btn-primary me-2"><i class="bi bi-linkedin"></i> LinkedIn</a>
+    <a href="mailto:lucecitaalva@hotmail.com" target="_blank" class="btn btn-outline-secondary"><i class="bi bi-envelope"></i> Email</a>
+  </div>
+</section>
+
+<footer class="py-3 text-center">
+  © 2025 Luz Angela Rodriguez Alvarado · Analista de Datos
+</footer>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  AOS.init({ duration: 900, once: true });
+</script>
+
 </body>
 </html>
